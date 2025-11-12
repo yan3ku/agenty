@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>pl.gda.pg.eti.kask.sa</groupId>
+    <artifactId>MigratingAgent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>MigratingAgent</name>
+
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- Lombok Dependency -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.34</version> <!-- You can update the version as needed -->
+            <scope>provided</scope> <!-- Lombok is a compile-time dependency, not runtime -->
+        </dependency>
+    </dependencies>
+</project>
