@@ -24,18 +24,20 @@ public class MigratingBehaviour extends Behaviour {
 
     @Override
     public void action() {
-        if (!myAgent.here().getID().equals(myAgent.getNextLocation().getID())) {
-            JOptionPane.showMessageDialog(null, "Coś jest nie tak!");
-            myAgent.setNextLocation(myAgent.here());
-            myAgent.getLocations().clear();
-        }
+        done = true;
+//        if (!myAgent.here().getID().equals(myAgent.getNextLocation().getID())) {
+//            JOptionPane.showMessageDialog(null, "Coś jest nie tak!");
+//            myAgent.setNextLocation(myAgent.here());
+//            myAgent.getLocations().clear();
+//        }
 
-        if (myAgent.getLocations().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Nowa lista!");
-            myAgent.addBehaviour(new RequestContainersListBehaviour(myAgent));
-            done = false;
-            return;
-        }
+//        if (myAgent.getLocations().isEmpty() || done) {
+//            JOptionPane.showMessageDialog(null, "Nowa lista!");
+//            myAgent.addBehaviour(new RequestContainersListBehaviour(myAgent));
+//            done = true;
+//            return;
+//        }
+        myAgent.addBehaviour(new RequestContainersListBehaviour(myAgent));
 
         Location location = myAgent.getLocations().get(0);
         myAgent.getLocations().remove(location);
